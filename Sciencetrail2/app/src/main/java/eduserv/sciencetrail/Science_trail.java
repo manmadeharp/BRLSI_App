@@ -125,6 +125,7 @@ public class Science_trail extends FragmentActivity {
         treeTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3874555555556f, -2.3772807f));
         treeTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3878388888889f, -2.377962f));
         treeTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3874694444444f, -2.3778145f));
+        treeTrial.add(new MapInformationObject(14,"tree", "The Fern-leaved Beech/Fagus heteraphylla", "longDescripton", 51.3880226f, -2.3753026f));
 
 
 
