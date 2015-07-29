@@ -74,14 +74,14 @@ public class Science_trail extends FragmentActivity {
      */
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.one))
                 .position(new LatLng(51.3829507, -2.363863)));
         /**
          * 2 Fox Talbot
          *made camera
          */
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.two))
                 .position(new LatLng(51.3858165, -2.3645067)));
         /**
          * 3 Livingstone
@@ -89,15 +89,74 @@ public class Science_trail extends FragmentActivity {
          */
 
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.three))
                 .position(new LatLng(51.3861914, -2.3642492)));
         /**
          *4 Parry
          */
 
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.four))
                 .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.five))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.six))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.seven))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.eight))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.nine))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ten))
+                .position(new LatLng(51.3859905, -2.3635626)));
+        /**
+         *
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.eleven))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.twelve))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.thirteen))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.fourteen))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.fifteen))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
 
     }
 }
