@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
 public class Science_trail extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
@@ -80,7 +81,7 @@ public class Science_trail extends FragmentActivity {
          *made camera
          */
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.scientist2))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
                 .position(new LatLng(51.3858165, -2.3645067)));
         /**
          * 3 Livingstone
@@ -88,16 +89,15 @@ public class Science_trail extends FragmentActivity {
          */
 
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.scientist3))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
                 .position(new LatLng(51.3861914, -2.3642492)));
         /**
          *4 Parry
          */
 
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.scientist4))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
                 .position(new LatLng(51.3859905, -2.3635626)));
-
 
     }
 }
