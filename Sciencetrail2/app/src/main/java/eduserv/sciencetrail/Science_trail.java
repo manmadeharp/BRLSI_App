@@ -19,17 +19,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Science_trail extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
 
+    public static final String EXTRA_TRIAL_NAME = "EXTRA_TRIAL_NAME";
+
     private List<MapInformationObject> scienceTrial;
     private List<MapInformationObject> treeTrial;
     private List<MapInformationObject> adelardTrial;
 
-
+    private String mapType;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class Science_trail extends FragmentActivity {
 
         loadData();
 
+        mapType = getIntent().getStringExtra(EXTRA_TRIAL_NAME);
 
         setUpMapIfNeeded();
         LatLng myCoordinates = new LatLng(51.3828167, -2.3627043);
@@ -45,7 +47,6 @@ public class Science_trail extends FragmentActivity {
 
 
     }
-
 
 
     private void loadData(){
@@ -168,7 +169,11 @@ public class Science_trail extends FragmentActivity {
 
     private void setUpMap() {
 
-        showScienceTrial();
+
+        if (mapType.equals("SCIENCE")){
+            showScienceTrial();
+        }
+
         showtreeTrial();
         showadelardTrial();
 
