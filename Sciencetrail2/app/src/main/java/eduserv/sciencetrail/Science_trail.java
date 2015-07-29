@@ -98,20 +98,19 @@ public class Science_trail extends FragmentActivity {
 
 
         //tree trail
-        scienceTrial.add(new MapInformationObject(1,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(2,"tree", "Title", "longDescripton", 51.3887527777778f, -2.3754998f));
-        scienceTrial.add(new MapInformationObject(3,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(4,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(5,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(6,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(7,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(8,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(9,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(10,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(11,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(12,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(13,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(14,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
+        scienceTrial.add(new MapInformationObject(1,"tree", "Western red cedar/Thuja plicata", "longDescripton", 51.3886305555556f, -2.3755293f));
+        scienceTrial.add(new MapInformationObject(2,"tree", "A Monkey Puzzle/Araucaria Araucana", "longDescripton", 51.3887527777778f, -2.3754998f));
+        scienceTrial.add(new MapInformationObject(3,"tree", "Spuce/Picea Smithiana", "longDescripton", 51.3887361111111f, -2.3767577f));
+        scienceTrial.add(new MapInformationObject(4,"tree", "Coastal Redwood/Sequoia Sempervirens", "longDescripton", 51.3885527777778f, -2.3771547f));
+        scienceTrial.add(new MapInformationObject(5,"tree", "Incense Cedar/calocedrus decurrens", "longDescripton", 51.3888277777778f, -2.377616f));
+        scienceTrial.add(new MapInformationObject(6,"tree", "Ehretia dicksonii/Ehretia dicksonii", "longDescripton", 51.3879722222222f, -2.3776241f));
+        scienceTrial.add(new MapInformationObject(7,"tree", "Weeping Ash/Fraxinus excelsior pendula", "longDescripton", 51.3879722222222f, -2.376527f));
+        scienceTrial.add(new MapInformationObject(8,"tree", "Dawn Redwood/Meetasequoia glyptostroboides", "longDescripton", 51.387675f, -2.3762159f));
+        scienceTrial.add(new MapInformationObject(9,"tree", "White Mulberry/Morus alba", "longDescripton", 51.38745f, -2.3769026f));
+        scienceTrial.add(new MapInformationObject(10,"tree", "The Indian Bean Tree/Catalpa bignonioides", "longDescripton",51.3874777777778f, -2.3771842f));
+        scienceTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3874555555556f, -2.3772807f));
+        scienceTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3878388888889f, -2.377962f));
+        scienceTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3874694444444f, -2.3778145f));
 
 
 
