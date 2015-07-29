@@ -87,14 +87,14 @@ public class Science_trail extends FragmentActivity {
         scienceTrial.add(new MapInformationObject(11,"science", "Adelard", "Born in Bath and world-famous in his day, Adelard was one of the great minds of the Middle Ages. He was a very early interpreter of scientific knowledge,zn " +
                 "writing treatises on the abacus and the astrolabe.\n " +
                 "He translated works on astronomy and mathematics\n " +
-                "(particularly Euclid’s Elements) from Arabic into Latin and helped introduce Arabic numerals to the west.\n", 51.3829172f, -2.3586622f));
+                "(particularly Euclid’s Elements) from Arabic into Latin and helped introduce Arabic numerals to the west.\n", 51.3818860f, -2.3580050f));
         scienceTrial.add(new MapInformationObject(12,"science", "Thomas Malthus", "Malthus was sent to Bath to be taught Latin and good behaviour by Richard Graves of Claverton Manor.\n " +
                 "He married his Bath cousin, Harriet, and died in Bath in 1834.\n " +
                 "Renowned as an economist,\n " +
-                "his famous Essay on Population influenced Charles Darwin when he was developing his theory of evolution\n", 51.381655f, -2.3579031f));
+                "his famous Essay on Population influenced Charles Darwin when he was developing his theory of evolution\n", 51.3818726f, -2.3574042f));
         scienceTrial.add(new MapInformationObject(13,"science", "Isaac Pitman", "Pitman invented Pitman’s shorthand in 1837 to allow him to write as fast as he could think. \n" +
                 "He marketed the system very effectively and set up a publishing company to print his own training materials.\n " +
-                "His advertising slogan was ‘Time saved is life prolonged’.\n", 51.3816516f, -2.3576134f));
+                "His advertising slogan was ‘Time saved is life prolonged’.\n", 51.3812565f, -2.3587346f));
         scienceTrial.add(new MapInformationObject(14,"science", "William & Caroline Herschel", "William Herschel came to Bath as a musician but his passion for astronomy led him to the discovery of Uranus in 1781,\n " +
                 "from his back garden, using a telescope he designed.\n " +
                 "George III appointed him as the ‘King’s Astronomer’ a year later. Caroline Herschel, his sister,\n " +
@@ -103,7 +103,7 @@ public class Science_trail extends FragmentActivity {
         scienceTrial.add(new MapInformationObject(15,"science", "Leonard Jenyns", "Jenyns was invited to be the naturalist aboard The Beagle but turned it down and his friend Charles Darwin went instead. \n" +
                 "The observations Darwin made on this voyage led to his famous work ‘On the Origin of Species’ introducing his theory of evolution. \n" +
                 "Jenyns wrote the report on the many new species of fish Darwin brought back.\n " +
-                "There are letters at BRLSI to Jenyns from Darwin.\n", 51.382723f, -2.3638201f));
+                "There are letters at BRLSI to Jenyns from Darwin.\n", 51.3826092f, -2.3638093f));
 
 
 
@@ -122,9 +122,9 @@ public class Science_trail extends FragmentActivity {
         treeTrial.add(new MapInformationObject(8,"tree", "Dawn Redwood/Meetasequoia glyptostroboides", "longDescripton", 51.387675f, -2.3762159f));
         treeTrial.add(new MapInformationObject(9,"tree", "White Mulberry/Morus alba", "longDescripton", 51.38745f, -2.3769026f));
         treeTrial.add(new MapInformationObject(10,"tree", "The Indian Bean Tree/Catalpa bignonioides", "longDescripton",51.3874777777778f, -2.3771842f));
-        treeTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3819396f, -2.3579621f));
-        treeTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3819329f, -2.3572969f));
-        treeTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3812498f, -2.3588204f));
+        treeTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3874555555556f, -2.3772807f));
+        treeTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3878388888889f, -2.377962f));
+        treeTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3874694444444f, -2.3778145f));
 
 
 
@@ -168,10 +168,11 @@ public class Science_trail extends FragmentActivity {
     private void setUpMap() {
 
         showScienceTrial();
-
+        showtreeTrial();
 
 
     }
+
 
     private void showScienceTrial(){
 
@@ -181,10 +182,20 @@ public class Science_trail extends FragmentActivity {
             mMap.addMarker(new MarkerOptions().position(new LatLng(item.getLongitude(), item.getLatitude()))
                             .icon(BitmapDescriptorFactory.fromBitmap(drawCircle(item.getNumber(), "#1E88E5", false)))
                             .title(item.getTitle())
-                            .snippet("tap here for more information")
-            );
+                            .snippet("tap here for more information"));
+            }};
+private void showtreeTrial(){
 
-        }//end for each science trial item
+            //add all the tree trial ones
+            for(MapInformationObject item : treeTrial){
+
+                mMap.addMarker(new MarkerOptions().position(new LatLng(item.getLongitude(), item.getLatitude()))
+                                .icon(BitmapDescriptorFactory.fromBitmap(drawCircle(item.getNumber(), "#2ecc71", false)))
+                                .title(item.getTitle())
+                                .snippet("tap here for more information")
+                );
+
+        }//end for each tree trial item
 
     }
 
