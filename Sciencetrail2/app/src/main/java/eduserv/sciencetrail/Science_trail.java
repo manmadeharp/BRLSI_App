@@ -41,7 +41,7 @@ public class Science_trail extends FragmentActivity {
 
     private void loadData(){
 
-        //science
+        //Science Trail
         scienceTrial = new ArrayList<>();
 
 
@@ -97,7 +97,7 @@ public class Science_trail extends FragmentActivity {
                 "There are letters at BRLSI to Jenyns from Darwin.\n", 51.382723f, -2.3638201f));
 
 
-        //tree trail
+        //Tree trail
         scienceTrial.add(new MapInformationObject(1,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
         scienceTrial.add(new MapInformationObject(2,"tree", "Title", "longDescripton", 51.3887527777778f, -2.3754998f));
         scienceTrial.add(new MapInformationObject(3,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
@@ -114,6 +114,18 @@ public class Science_trail extends FragmentActivity {
         scienceTrial.add(new MapInformationObject(14,"tree", "Title", "longDescripton", 51.3886305555556f, -2.3755293f));
 
 
+        //Adelard Trail
+        scienceTrial.add(new MapInformationObject(1,"adelard", "Title", "longDescripton", 51.3833277777778f, -2.3642626f));
+        scienceTrial.add(new MapInformationObject(2,"adelard", "Title", "longDescripton", 51.382175f, -2.3625728f));
+        scienceTrial.add(new MapInformationObject(3,"adelard", "Title", "longDescripton", 51.3812388888889f, -2.3622456f));
+        scienceTrial.add(new MapInformationObject(4,"adelard", "Title", "longDescripton", 51.3815666666667f, -2.3612103f));
+        scienceTrial.add(new MapInformationObject(5,"adelard", "Title", "longDescripton", 51.3818194444444f, -2.3591611f));
+        scienceTrial.add(new MapInformationObject(6,"adelard", "Title", "longDescripton", 51.3809861111111f, -2.3592469f));
+        scienceTrial.add(new MapInformationObject(7,"adelard", "Title", "longDescripton", 51.3802888888889f, -2.3591074f));
+        scienceTrial.add(new MapInformationObject(8,"adelard", "Title", "longDescripton", 51.3804305555556f, -2.3602966f));
+        scienceTrial.add(new MapInformationObject(9,"adelard", "Title", "longDescripton", 51.3416513737756f, -2.3599926f));
+        scienceTrial.add(new MapInformationObject(10,"adelard", "Title", "longDescripton", 51.3827138888889f, -2.3613551f));
+        scienceTrial.add(new MapInformationObject(11,"adelard", "Title", "longDescripton", 51.3827527777778f, -2.3625407f));
 
     }
 
