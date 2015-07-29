@@ -23,4 +23,30 @@ public class MapInformationObject {
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public String getTrialName() {
+        return trialName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
+    public float getLongitude() {
+        return longitude;
+    }
+
+    public float getLatitude() {
+        return latitude;
+    }
 }
+

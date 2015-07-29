@@ -1,5 +1,10 @@
 package eduserv.sciencetrail;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -29,6 +34,10 @@ public class Science_trail extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_science_trail);
+
+        loadData();
+
+
         setUpMapIfNeeded();
         LatLng myCoordinates = new LatLng(51.3828167, -2.3627043);
         CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(myCoordinates, 16);
@@ -98,38 +107,40 @@ public class Science_trail extends FragmentActivity {
 
 
 
-        //Tree trail
-        scienceTrial.add(new MapInformationObject(1,"tree", "Western red cedar/Thuja plicata", "While this is not a champion tree, " +
+        //Tree trail -
+        treeTrial = new ArrayList<>();
+        treeTrial.add(new MapInformationObject(1,"tree", "Western red cedar/Thuja plicata", "While this is not a champion tree, " +
                 "it is of special interest because of the magnificent root system gripping onto the bank as if for dear life. \n" +
                 "This is one of the few remaining examples of a Victorian fashion for  showing the beauty of nature by removing the soil from the roots,\n " +
                 "which would usually be hidden – here you can see how attractive and extensive it is.\n", 51.3886305555556f, -2.3755293f));
-        scienceTrial.add(new MapInformationObject(2,"tree", "A Monkey Puzzle/Araucaria Araucana", "longDescripton", 51.3887527777778f, -2.3754998f));
-        scienceTrial.add(new MapInformationObject(3,"tree", "Spuce/Picea Smithiana", "longDescripton", 51.3887361111111f, -2.3767577f));
-        scienceTrial.add(new MapInformationObject(4,"tree", "Coastal Redwood/Sequoia Sempervirens", "longDescripton", 51.3885527777778f, -2.3771547f));
-        scienceTrial.add(new MapInformationObject(5,"tree", "Incense Cedar/calocedrus decurrens", "longDescripton", 51.3888277777778f, -2.377616f));
-        scienceTrial.add(new MapInformationObject(6,"tree", "Ehretia dicksonii/Ehretia dicksonii", "longDescripton", 51.3879722222222f, -2.3776241f));
-        scienceTrial.add(new MapInformationObject(7,"tree", "Weeping Ash/Fraxinus excelsior pendula", "longDescripton", 51.3879722222222f, -2.376527f));
-        scienceTrial.add(new MapInformationObject(8,"tree", "Dawn Redwood/Meetasequoia glyptostroboides", "longDescripton", 51.387675f, -2.3762159f));
-        scienceTrial.add(new MapInformationObject(9,"tree", "White Mulberry/Morus alba", "longDescripton", 51.38745f, -2.3769026f));
-        scienceTrial.add(new MapInformationObject(10,"tree", "The Indian Bean Tree/Catalpa bignonioides", "longDescripton",51.3874777777778f, -2.3771842f));
-        scienceTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3874555555556f, -2.3772807f));
-        scienceTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3878388888889f, -2.377962f));
-        scienceTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3874694444444f, -2.3778145f));
+        treeTrial.add(new MapInformationObject(2,"tree", "A Monkey Puzzle/Araucaria Araucana", "longDescripton", 51.3887527777778f, -2.3754998f));
+        treeTrial.add(new MapInformationObject(3,"tree", "Spuce/Picea Smithiana", "longDescripton", 51.3887361111111f, -2.3767577f));
+        treeTrial.add(new MapInformationObject(4,"tree", "Coastal Redwood/Sequoia Sempervirens", "longDescripton", 51.3885527777778f, -2.3771547f));
+        treeTrial.add(new MapInformationObject(5,"tree", "Incense Cedar/calocedrus decurrens", "longDescripton", 51.3888277777778f, -2.377616f));
+        treeTrial.add(new MapInformationObject(6,"tree", "Ehretia dicksonii/Ehretia dicksonii", "longDescripton", 51.3879722222222f, -2.3776241f));
+        treeTrial.add(new MapInformationObject(7,"tree", "Weeping Ash/Fraxinus excelsior pendula", "longDescripton", 51.3879722222222f, -2.376527f));
+        treeTrial.add(new MapInformationObject(8,"tree", "Dawn Redwood/Meetasequoia glyptostroboides", "longDescripton", 51.387675f, -2.3762159f));
+        treeTrial.add(new MapInformationObject(9,"tree", "White Mulberry/Morus alba", "longDescripton", 51.38745f, -2.3769026f));
+        treeTrial.add(new MapInformationObject(10,"tree", "The Indian Bean Tree/Catalpa bignonioides", "longDescripton",51.3874777777778f, -2.3771842f));
+        treeTrial.add(new MapInformationObject(11,"tree", "The Glastonbury Thorn/Crataeis monogyna ", "longDescripton", 51.3819396f, -2.3579621f));
+        treeTrial.add(new MapInformationObject(12,"tree", "The maidenhair tree/Ginkgo biloba", "longDescripton", 51.3819329f, -2.3572969f));
+        treeTrial.add(new MapInformationObject(13,"tree", "The Silver Pendent Lime/Tilla tomentosa", "longDescripton", 51.3812498f, -2.3588204f));
 
 
 
-        //Adelard Trail
-        scienceTrial.add(new MapInformationObject(1,"adelard", "Title", "From here Adelard would have seen an untidy piece of ground and the outside walls of the medieval city.", 51.3833277777778f, -2.3642626f));
-        scienceTrial.add(new MapInformationObject(2,"adelard", "Title", "This is the site of Gascoyne Tower, a defensive feature, where the town walls turned south. The invading troops that attacked Bath approached across the open land to your right.", 51.382175f, -2.3625728f));
-        scienceTrial.add(new MapInformationObject(3,"adelard", "Title", "The Royal West Gate stood here. All important people entered through it – though it was securely locked at night.", 51.3812388888889f, -2.3622456f));
-        scienceTrial.add(new MapInformationObject(4,"adelard", "Title", "Adelard would have recognised these streets which housed tradesmen such as bakers, wool merchants, and shoe and candle makers. Walk on to Stall Street, on the right. In Adelard’s day, this was a new street, built to provide access to the South Gate. It ran alongside a high wall which marked the Abbey precinct, in which Adelard spent most of his time.", 51.3815666666667f, -2.3612103f));
-        scienceTrial.add(new MapInformationObject(5,"adelard", "Title", "Here was the heart of the town, the medieval market place, which was widened into the triangular site you see today, where the traders could put up stalls and pens for their animals. It led to the North Gate; outside this were the dangerous and smelly industries like tanning and metal working.", 51.3818194444444f, -2.3591611f));
-        scienceTrial.add(new MapInformationObject(6,"adelard", "Title", "The old Saxon church was burned down and replaced by a Norman cathedral, one of the largest churches in Europe and far bigger than the one you see now which replaced it. As a teenager, Adelard would have seen this whole area busy with the building of cloisters, dormitories and a Bishop’s Palace. Carry on walking between the Abbey and the Roman Baths. Adelard probably stayed in the precinct when he wasn’t travelling, even though he wasn’t a monk.", 51.3809861111111f, -2.3592469f));
-        scienceTrial.add(new MapInformationObject(7,"adelard", "Title", "In the far right corner is the site of the Bishop’s Palace and ahead is what remains of Abbey Gate. When you get to the modern arch, look down and you can see at ground level some of the old stones of the Abbey Wall.  When you walk under the arch, look back and see one of the hinges of the Abbey Gate itself.", 51.3802888888889f, -2.3591074f));
-        scienceTrial.add(new MapInformationObject(8,"adelard", "Title", "You will see that, just as in medieval times, there are stalls, buskers and lots of visitors.", 51.3804305555556f, -2.3602966f));
-        scienceTrial.add(new MapInformationObject(9,"adelard", "Title", "This was an important Norman shopping street.", 51.3416513737756f, -2.3599926f));
-        scienceTrial.add(new MapInformationObject(10,"adelard", "Title", "Remember you are now outside the medieval city walls, unprotected from your enemies and probably walking knee deep in sewage and rubbish!", 51.3827138888889f, -2.3613551f));
-        scienceTrial.add(new MapInformationObject(11,"adelard", "Title", "BRLSI is diagonally ahead of you.", 51.3827527777778f, -2.3625407f));
+        //Adelard Trail -
+        adelardTrial = new ArrayList<>();
+        adelardTrial.add(new MapInformationObject(1,"adelard", "Title", "From here Adelard would have seen an untidy piece of ground and the outside walls of the medieval city.", 51.3833277777778f, -2.3642626f));
+        adelardTrial.add(new MapInformationObject(2,"adelard", "Title", "This is the site of Gascoyne Tower, a defensive feature, where the town walls turned south. The invading troops that attacked Bath approached across the open land to your right.", 51.382175f, -2.3625728f));
+        adelardTrial.add(new MapInformationObject(3,"adelard", "Title", "The Royal West Gate stood here. All important people entered through it – though it was securely locked at night.", 51.3812388888889f, -2.3622456f));
+        adelardTrial.add(new MapInformationObject(4,"adelard", "Title", "Adelard would have recognised these streets which housed tradesmen such as bakers, wool merchants, and shoe and candle makers. Walk on to Stall Street, on the right. In Adelard’s day, this was a new street, built to provide access to the South Gate. It ran alongside a high wall which marked the Abbey precinct, in which Adelard spent most of his time.", 51.3815666666667f, -2.3612103f));
+        adelardTrial.add(new MapInformationObject(5,"adelard", "Title", "Here was the heart of the town, the medieval market place, which was widened into the triangular site you see today, where the traders could put up stalls and pens for their animals. It led to the North Gate; outside this were the dangerous and smelly industries like tanning and metal working.", 51.3818194444444f, -2.3591611f));
+        adelardTrial.add(new MapInformationObject(6,"adelard", "Title", "The old Saxon church was burned down and replaced by a Norman cathedral, one of the largest churches in Europe and far bigger than the one you see now which replaced it. As a teenager, Adelard would have seen this whole area busy with the building of cloisters, dormitories and a Bishop’s Palace. Carry on walking between the Abbey and the Roman Baths. Adelard probably stayed in the precinct when he wasn’t travelling, even though he wasn’t a monk.", 51.3809861111111f, -2.3592469f));
+        adelardTrial.add(new MapInformationObject(7,"adelard", "Title", "In the far right corner is the site of the Bishop’s Palace and ahead is what remains of Abbey Gate. When you get to the modern arch, look down and you can see at ground level some of the old stones of the Abbey Wall.  When you walk under the arch, look back and see one of the hinges of the Abbey Gate itself.", 51.3802888888889f, -2.3591074f));
+        adelardTrial.add(new MapInformationObject(8,"adelard", "Title", "You will see that, just as in medieval times, there are stalls, buskers and lots of visitors.", 51.3804305555556f, -2.3602966f));
+        adelardTrial.add(new MapInformationObject(9,"adelard", "Title", "This was an important Norman shopping street.", 51.3416513737756f, -2.3599926f));
+        adelardTrial.add(new MapInformationObject(10,"adelard", "Title", "Remember you are now outside the medieval city walls, unprotected from your enemies and probably walking knee deep in sewage and rubbish!", 51.3827138888889f, -2.3613551f));
+        adelardTrial.add(new MapInformationObject(11,"adelard", "Title", "BRLSI is diagonally ahead of you.", 51.3827527777778f, -2.3625407f));
 
     }
 
@@ -139,21 +150,7 @@ public class Science_trail extends FragmentActivity {
         setUpMapIfNeeded();
     }
 
-    /**
-     * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
-     * installed) and the map has not already been instantiated.. This will ensure that we only ever
-     * call {@link #setUpMap()} once when {@link #mMap} is not null.
-     * <p/>
-     * If it isn't installed {@link SupportMapFragment} (and
-     * {@link com.google.android.gms.maps.MapView MapView}) will show a prompt for the user to
-     * install/update the Google Play services APK on their device.
-     * <p/>
-     * A user can return to this FragmentActivity after following the prompt and correctly
-     * installing/updating/enabling the Google Play services. Since the FragmentActivity may not
-     * have been completely destroyed during this process (it is likely that it would only be
-     * stopped or paused), {@link #onCreate(Bundle)} may not be called again so we should call this
-     * method in {@link #onResume()} to guarantee that it will be called.
-     */
+
     private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
@@ -167,62 +164,63 @@ public class Science_trail extends FragmentActivity {
         }
     }
 
-    /**
-     * This is where we can add markers or lines, add listeners or move the camera. In this case, we
-     * just add a marker near Africa.
-     * <p/>
-     * This should only be called once and when we are sure that {@link #mMap} is not null.
-     */
-    /**
-     * 1 is Dr William Oliver
-     *made biscuit
-     */
+
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
-                .position(new LatLng(51.3829507, -2.363863))
-                .title("Dr William Oliver")
-                .snippet("Oliver became the leading physician in the city and a founder of the Mineral Water Hospital. " +
-                        "His wrote a book on the water of Bath with an emphasis on drinking as well as bathing, " +
-                        "and this helped increase the attract of the city to visitors. " +
-                        "His interest in diet and health led to the invention of the famous Bath Oliver biscuit."));
-        /**
-         * 2 Fox Talbot
-         *made camera
-         */
-        mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
-                .position(new LatLng(51.3858165, -2.3645067))
-                .title("Fox Talbot")
-                .snippet("Fox Talbot discovered the processes that became the foundations of modern photography, " +
-                        "developing negatives from which an infinite number of prints could be produced," +
-                        " a process which was patented in 1841 as the calotype Although most closely connected to his family home, " +
-                        "Lacock Abbey, he lived at No 4 between 1871–76."));
-        /**
-         * 3 Livingstone
-         *
-         */
 
-        mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
-                .position(new LatLng(51.3861914, -2.3642492))
-                .title("Davao City")
-                .snippet("Ateneo de Davao University"));
-        /**
-         *4 Parry
-         */
-
-        mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
-                .position(new LatLng(51.3859905, -2.3635626))
-        .title("Davao City")
-                .snippet("Ateneo de Davao University"));
-        /**
-         *
-         */
+        showScienceTrial();
 
 
 
+    }
+
+    private void showScienceTrial(){
+
+        //add all the science trial ones
+        for(MapInformationObject item : scienceTrial){
+
+            mMap.addMarker(new MarkerOptions().position(new LatLng(item.getLongitude(), item.getLatitude()))
+                            .icon(BitmapDescriptorFactory.fromBitmap(drawCircle(item.getNumber(), "#1E88E5", false)))
+                            .title(item.getTitle())
+                            .snippet("tap here for more information")
+            );
+
+        }//end for each science trial item
+
+    }
+
+
+
+
+    private Bitmap drawCircle(int number, String colour, boolean textBlack){
+
+        Bitmap.Config conf = Bitmap.Config.ARGB_8888;
+        Bitmap bmp = Bitmap.createBitmap(40, 40, conf);
+        Canvas canvas = new Canvas(bmp);
+
+        //draw a circle
+        Paint color = new Paint();
+        color.setColor(Color.parseColor(colour));
+        canvas.drawCircle(20, 20, 20, color);
+
+        //draw text
+        if (textBlack){
+            color.setColor(Color.BLACK);
+        } else {
+            color.setColor(Color.WHITE);
+        }
+
+
+        color.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+
+        if (number < 10){
+            color.setTextSize(25);
+            canvas.drawText(Integer.toString(number), 15, 30, color);
+        } else {
+            color.setTextSize(18);
+            canvas.drawText(Integer.toString(number), 10, 27, color);
+        }
+
+        return bmp;
     }
 }
 
