@@ -116,17 +116,17 @@ public class Science_trail extends FragmentActivity {
 
 
         //Adelard Trail
-        scienceTrial.add(new MapInformationObject(1,"adelard", "Title", "longDescripton", 51.3833277777778f, -2.3642626f));
-        scienceTrial.add(new MapInformationObject(2,"adelard", "Title", "longDescripton", 51.382175f, -2.3625728f));
-        scienceTrial.add(new MapInformationObject(3,"adelard", "Title", "longDescripton", 51.3812388888889f, -2.3622456f));
-        scienceTrial.add(new MapInformationObject(4,"adelard", "Title", "longDescripton", 51.3815666666667f, -2.3612103f));
-        scienceTrial.add(new MapInformationObject(5,"adelard", "Title", "longDescripton", 51.3818194444444f, -2.3591611f));
-        scienceTrial.add(new MapInformationObject(6,"adelard", "Title", "longDescripton", 51.3809861111111f, -2.3592469f));
-        scienceTrial.add(new MapInformationObject(7,"adelard", "Title", "longDescripton", 51.3802888888889f, -2.3591074f));
-        scienceTrial.add(new MapInformationObject(8,"adelard", "Title", "longDescripton", 51.3804305555556f, -2.3602966f));
-        scienceTrial.add(new MapInformationObject(9,"adelard", "Title", "longDescripton", 51.3416513737756f, -2.3599926f));
-        scienceTrial.add(new MapInformationObject(10,"adelard", "Title", "longDescripton", 51.3827138888889f, -2.3613551f));
-        scienceTrial.add(new MapInformationObject(11,"adelard", "Title", "longDescripton", 51.3827527777778f, -2.3625407f));
+        scienceTrial.add(new MapInformationObject(1,"adelard", "Title", "From here Adelard would have seen an untidy piece of ground and the outside walls of the medieval city.", 51.3833277777778f, -2.3642626f));
+        scienceTrial.add(new MapInformationObject(2,"adelard", "Title", "This is the site of Gascoyne Tower, a defensive feature, where the town walls turned south. The invading troops that attacked Bath approached across the open land to your right.", 51.382175f, -2.3625728f));
+        scienceTrial.add(new MapInformationObject(3,"adelard", "Title", "The Royal West Gate stood here. All important people entered through it – though it was securely locked at night.", 51.3812388888889f, -2.3622456f));
+        scienceTrial.add(new MapInformationObject(4,"adelard", "Title", "Adelard would have recognised these streets which housed tradesmen such as bakers, wool merchants, and shoe and candle makers. Walk on to Stall Street, on the right. In Adelard’s day, this was a new street, built to provide access to the South Gate. It ran alongside a high wall which marked the Abbey precinct, in which Adelard spent most of his time.", 51.3815666666667f, -2.3612103f));
+        scienceTrial.add(new MapInformationObject(5,"adelard", "Title", "Here was the heart of the town, the medieval market place, which was widened into the triangular site you see today, where the traders could put up stalls and pens for their animals. It led to the North Gate; outside this were the dangerous and smelly industries like tanning and metal working.", 51.3818194444444f, -2.3591611f));
+        scienceTrial.add(new MapInformationObject(6,"adelard", "Title", "The old Saxon church was burned down and replaced by a Norman cathedral, one of the largest churches in Europe and far bigger than the one you see now which replaced it. As a teenager, Adelard would have seen this whole area busy with the building of cloisters, dormitories and a Bishop’s Palace. Carry on walking between the Abbey and the Roman Baths. Adelard probably stayed in the precinct when he wasn’t travelling, even though he wasn’t a monk.", 51.3809861111111f, -2.3592469f));
+        scienceTrial.add(new MapInformationObject(7,"adelard", "Title", "In the far right corner is the site of the Bishop’s Palace and ahead is what remains of Abbey Gate. When you get to the modern arch, look down and you can see at ground level some of the old stones of the Abbey Wall.  When you walk under the arch, look back and see one of the hinges of the Abbey Gate itself.", 51.3802888888889f, -2.3591074f));
+        scienceTrial.add(new MapInformationObject(8,"adelard", "Title", "You will see that, just as in medieval times, there are stalls, buskers and lots of visitors.", 51.3804305555556f, -2.3602966f));
+        scienceTrial.add(new MapInformationObject(9,"adelard", "Title", "This was an important Norman shopping street.", 51.3416513737756f, -2.3599926f));
+        scienceTrial.add(new MapInformationObject(10,"adelard", "Title", "Remember you are now outside the medieval city walls, unprotected from your enemies and probably walking knee deep in sewage and rubbish!", 51.3827138888889f, -2.3613551f));
+        scienceTrial.add(new MapInformationObject(11,"adelard", "Title", "BRLSI is diagonally ahead of you.", 51.3827527777778f, -2.3625407f));
 
     }
 
