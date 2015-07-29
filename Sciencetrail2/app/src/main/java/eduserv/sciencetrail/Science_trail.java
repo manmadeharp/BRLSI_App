@@ -3,9 +3,12 @@ package eduserv.sciencetrail;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -18,8 +21,11 @@ public class Science_trail extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_science_trail);
         setUpMapIfNeeded();
-        LatLng Bath = new LatLng(52.512657, 1.011376);
-        CameraUpdateFactory.newLatLngZoom(Bath, 10.0f);
+        LatLng myCoordinates = new LatLng(51.3828167, -2.3627043);
+        CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(myCoordinates, 16);
+        mMap.animateCamera(yourLocation);
+
+
 
     }
     @Override
@@ -63,6 +69,8 @@ public class Science_trail extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
+                .position(new LatLng(51.3829507, -2.363863)));
     }
 }
