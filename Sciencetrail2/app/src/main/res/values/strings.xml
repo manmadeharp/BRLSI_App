@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Science trail</string>
     <string name="title_activity_science_trail">Sciencetrail</string>
+    <string name="title_activity_introduction">IntroductionActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

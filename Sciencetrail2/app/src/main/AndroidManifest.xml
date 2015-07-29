@@ -15,9 +15,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:icon="@drawable/mushroom"
+        android:label="poop"
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -28,6 +28,11 @@
         <activity
             android:name=".Science_trail"
             android:label="@string/title_activity_science_trail" >
+
+        </activity>
+        <activity
+            android:name=".IntroductionActivity"
+            android:label="@string/title_activity_introduction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

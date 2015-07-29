@@ -170,6 +170,7 @@ public class Science_trail extends FragmentActivity {
 
         showScienceTrial();
         showtreeTrial();
+        showadelardTrial();
 
 
     }
@@ -185,6 +186,7 @@ public class Science_trail extends FragmentActivity {
                             .title(item.getTitle())
                             .snippet("tap here for more information"));
             }};
+
 private void showtreeTrial(){
 
             //add all the tree trial ones
@@ -193,12 +195,24 @@ private void showtreeTrial(){
                 mMap.addMarker(new MarkerOptions().position(new LatLng(item.getLongitude(), item.getLatitude()))
                                 .icon(BitmapDescriptorFactory.fromBitmap(drawCircle(item.getNumber(), "#2ecc71", false)))
                                 .title(item.getTitle())
-                                .snippet("tap here for more information")
-                );
+                                .snippet("tap here for more information"));
+                }};
 
-        }//end for each tree trial item
+        //end for each tree trial item
+    private void showadelardTrial(){
 
-    }
+        //add all the adelard trial ones
+        for(MapInformationObject item : adelardTrial){
+
+            mMap.addMarker(new MarkerOptions().position(new LatLng(item.getLongitude(), item.getLatitude()))
+                            .icon(BitmapDescriptorFactory.fromBitmap(drawCircle(item.getNumber(), "#e74c3c", false)))
+                            .title(item.getTitle())
+                            .snippet("tap here for more information"));
+        }};
+
+        //end for each adelard trial item
+
+
 
 
 
