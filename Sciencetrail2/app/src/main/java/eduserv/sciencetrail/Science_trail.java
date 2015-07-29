@@ -99,7 +99,10 @@ public class Science_trail extends FragmentActivity {
 
 
         //Tree trail
-        scienceTrial.add(new MapInformationObject(1,"tree", "Western red cedar/Thuja plicata", "longDescripton", 51.3886305555556f, -2.3755293f));
+        scienceTrial.add(new MapInformationObject(1,"tree", "Western red cedar/Thuja plicata", "While this is not a champion tree, " +
+                "it is of special interest because of the magnificent root system gripping onto the bank as if for dear life. \n" +
+                "This is one of the few remaining examples of a Victorian fashion for  showing the beauty of nature by removing the soil from the roots,\n " +
+                "which would usually be hidden – here you can see how attractive and extensive it is.\n", 51.3886305555556f, -2.3755293f));
         scienceTrial.add(new MapInformationObject(2,"tree", "A Monkey Puzzle/Araucaria Araucana", "longDescripton", 51.3887527777778f, -2.3754998f));
         scienceTrial.add(new MapInformationObject(3,"tree", "Spuce/Picea Smithiana", "longDescripton", 51.3887361111111f, -2.3767577f));
         scienceTrial.add(new MapInformationObject(4,"tree", "Coastal Redwood/Sequoia Sempervirens", "longDescripton", 51.3885527777778f, -2.3771547f));
