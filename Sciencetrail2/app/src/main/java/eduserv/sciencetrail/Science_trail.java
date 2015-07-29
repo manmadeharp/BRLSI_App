@@ -26,8 +26,8 @@ public class Science_trail extends FragmentActivity {
         mMap.animateCamera(yourLocation);
 
 
-
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -68,9 +68,37 @@ public class Science_trail extends FragmentActivity {
      * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
+    /**
+     * 1 is Dr William Oliver
+     *made biscuit
+     */
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions()
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.beaker))
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
                 .position(new LatLng(51.3829507, -2.363863)));
+        /**
+         * 2 Fox Talbot
+         *made camera
+         */
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.talbot))
+                .position(new LatLng(51.3858165, -2.3645067)));
+        /**
+         * 3 Livingstone
+         *
+         */
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .position(new LatLng(51.3861914, -2.3642492)));
+        /**
+         *4 Parry
+         */
+
+        mMap.addMarker(new MarkerOptions()
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.oliver))
+                .position(new LatLng(51.3859905, -2.3635626)));
+
     }
 }
+
