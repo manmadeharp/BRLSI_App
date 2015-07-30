@@ -22,6 +22,8 @@ public class IntroductionActivity extends ActionBarActivity {
         setContentView(R.layout.activity_introduction);
 
         btnScience = (Button)findViewById(R.id.btnScience);
+        btnTree = (Button)findViewById(R.id.btnTree);
+        btnAdelard = (Button)findViewById(R.id.btnAdelard);
         //hook them up to the lyout
 
 
@@ -54,6 +56,7 @@ public class IntroductionActivity extends ActionBarActivity {
 
             //more onclick listeners
         //which go to new activity
+
 
     }
 
