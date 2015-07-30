@@ -1,9 +1,11 @@
 package eduserv.sciencetrail;
 
+import java.io.Serializable;
+
 /**
  * Created by Helen on 29/07/2015.
  */
-public class MapInformationObject {
+public class MapInformationObject implements Serializable {
 
     private Integer number; //e.g.1
     private String trialName; //e.g. science

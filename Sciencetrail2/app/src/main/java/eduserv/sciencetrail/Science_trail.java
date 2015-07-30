@@ -61,8 +61,6 @@ public class Science_trail extends FragmentActivity {
             @Override
             public void onInfoWindowClick(Marker marker)
             {
-                Toast.makeText(getApplicationContext(), "Clicked a window with title..." + marker.getTitle(),
-                        Toast.LENGTH_SHORT).show();
 
                 MapInformationObject clickedItem = null;
 
@@ -81,11 +79,30 @@ public class Science_trail extends FragmentActivity {
                     }
                 }
 
+                if (mapType.equals("SCIENCE")){
+
+                    for (MapInformationObject m : scienceTrial) {
+                        if (marker.getTitle().equals(m.getTitle())) {
+                            clickedItem = m;
+
+                        }
+                    }
+                }
+                if (mapType.equals("ADELARD")){
+
+                    for (MapInformationObject m : adelardTrial) {
+                        if (marker.getTitle().equals(m.getTitle())) {
+                            clickedItem = m;
+
+                        }
+                    }
+                }
+
 
 
                 Intent i = new Intent(Science_trail.this, InformationActivity.class);
 
-                //todo: pass the MapInformaionObject
+                i.putExtra("MAP_ITEM", clickedItem);
                 startActivity(i);
 
 
